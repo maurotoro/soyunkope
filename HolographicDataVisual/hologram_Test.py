@@ -1,7 +1,15 @@
 # -*- coding: utf-8 -*-
 """
 Created on Wed May 11 13:45:51 2016
-
+    Poor implementation of an holographic visualization for data
+    It creates a surface and rotates it from different starting points.
+    Then I save every gif and join them to create a .gif that can be
+    seen as an hologram if you cut a trapezoid and put it on top of your screen
+    Examples:
+            https://www.youtube.com/watch?v=7YWTtCsvgvg
+            http://rimstar.org/science_electronics_projects/hologram_pyramid_diy_homemade.htm
+            http://prefundia.com/projects/view/hologram-pyramid-peppers-ghost-no-mirrors-double-blur/6536/
+    Feel free to fork and comment!
 @author: soyunkope
 """
 
