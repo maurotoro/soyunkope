@@ -22,7 +22,7 @@ signal = np.sin(2*np.pi*5*t)
 analytic_signal = hilbert(signal)
 amplitude_envelope = np.abs(analytic_signal)
 instantaneous_phase = np.unwrap(np.angle(analytic_signal))
-instantaneous_frequency = np.diff(instantaneous_phase) / (2.0*np.pi) * fs
+instantaneous_frequency = np.diff(instantaneous_phase) * (fs/(2.0*np.pi))
 analytic_phase =  np.arctan2(np.imag(analytic_signal), signal)
 
 
@@ -37,7 +37,7 @@ ax0.plot(t, amplitude_envelope, label='envelope')
 ax0.plot(t, (analytic_signal), '--r', label='analytic')
 ax0.legend()
 ax1 = fig.add_subplot(212, sharex=ax0)
-ax1.plot(t, analytic_phase, t, instantaneous_phase)
+ax1.plot(t, analytic_phase, t, instantaneous_phase, t[1:], instantaneous_frequency)
 #ax2 = fig.add_subplot(213)
 #ax2.plot(t[1:], instantaneous_frequency )
 #ax2.set_xticklabels(np.linspace(0,duration,num=5))
